@@ -57,9 +57,9 @@ export default function Home() {
                     setReceipt(resultData)
                     setProducts(resultData.data.products)
 
-                    const logo = resultData.data.receipt.merchant_origin;
-                    const logo_src = `/images/logos/${(logo === "FARMA") ? "bemol-farma.png" : "bemol-mercado.png"}`;
-                    setReceiptLogo(logo_src);
+                    const logo = resultData.data.receipt.merchant_origin
+                    const logo_src = `/images/logos/${logo === 'FARMA' ? 'bemol-farma.png' : 'bemol-mercado.png'}`
+                    setReceiptLogo(logo_src)
 
                     setTimeout(() => setFocusOnProductInput(), 1)
                 } else {
