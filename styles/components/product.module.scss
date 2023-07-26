@@ -1,0 +1,32 @@
+@import '../colors';
+
+.product {
+    padding: 15px;
+    position: relative;
+    border: 2px solid $primary-color;
+    &:not(:first-of-type) {
+        border-top: 0;
+    }
+    .image {
+        text-align: center;
+    }
+    .name {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        color: $secondary-color;
+        margin-bottom: 15px;
+        word-break: break-all;
+    }
+    .data {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 12px;
+        .field {
+            .title {
+                font-weight: 700;
+            }
+        }
+    }
+}

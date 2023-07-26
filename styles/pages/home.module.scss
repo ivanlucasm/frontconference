@@ -1,0 +1,39 @@
+@import '../colors';
+
+.hiddenProductsAmount {
+    display: none;
+}
+
+.forms {
+    position: relative;
+    // .formProduct {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     opacity: 0;
+    //     z-index: -1;
+    // }
+}
+
+.actions {
+    display: flex;
+    margin-top: 15px;
+}
+
+.products {
+    height: 100%;
+    max-height: 500px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 279px) {
+    .actions {
+        flex-wrap: wrap;
+        :first-child {
+            margin-right: 0 !important;
+            margin-bottom: 15px;
+        }
+    }
+}
