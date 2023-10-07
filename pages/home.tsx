@@ -121,8 +121,10 @@ export default function Home() {
         products.map((item, index) => {
             if (item.qtd_checked < item.qtd) {
                 if (item.ean === value || item.sku === value) {
+                    const elementToScroll = document.getElementById(`item-${item.ean}`);
                     newProductsArray[index].qtd_checked++
                     clearProductField()
+                    elementToScroll.scrollIntoView({ behavior: 'smooth' })
                     // if (item.qtd === item.qtd_checked) {
                     //     setTimeout(() => productsList.current.scrollTo(0, 0), 3000) // scroll to top
                     //     // setTimeout(() => (productsList.current.scrollTop = productsList.current.scrollHeight), 3000) // scroll to bottom

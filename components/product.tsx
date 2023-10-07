@@ -14,7 +14,7 @@ export default function Product({
     updated_at,
 }: IProduct) {
     return (
-        <div className={styles.product}>
+        <div className={styles.product} id={`item-${ean}`}>
             <div className={styles.image}>
                 <img src={image} width={210} />
             </div>
